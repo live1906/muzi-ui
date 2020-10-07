@@ -1,0 +1,254 @@
+.muzi-button {
+  box-sizing: border-box;
+  height: 32px;
+  padding: 0 12px;
+  cursor: pointer;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  white-space: nowrap;
+  background: white;
+  color: #333;
+  border: 1px solid #d9d9d9;
+  border-radius: 4px;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.05);
+  transition: background 250ms;
+}
+.muzi-button + .muzi-button {
+  margin-left: 8px;
+}
+.muzi-button:hover, .muzi-button:focus {
+  color: #40a9ff;
+  border-color: #40a9ff;
+}
+.muzi-button:focus {
+  outline: none;
+}
+.muzi-button::-moz-focus-inner {
+  border: 0;
+}
+.muzi-button.muzi-theme-link {
+  border-color: transparent;
+  box-shadow: none;
+  color: #40a9ff;
+}
+.muzi-button.muzi-theme-link:hover, .muzi-button.muzi-theme-link:focus {
+  color: #73c0ff;
+}
+.muzi-button.muzi-theme-text {
+  border-color: transparent;
+  box-shadow: none;
+  color: inherit;
+}
+.muzi-button.muzi-theme-text:hover, .muzi-button.muzi-theme-text:focus {
+  background: #f2f2f2;
+}
+.muzi-button.muzi-size-big {
+  font-size: 24px;
+  height: 48px;
+  padding: 0 16px;
+}
+.muzi-button.muzi-size-small {
+  font-size: 12px;
+  height: 20px;
+  padding: 0 4px;
+}
+.muzi-button.muzi-theme-button.muzi-level-main {
+  background: #40a9ff;
+  color: white;
+  border-color: #40a9ff;
+}
+.muzi-button.muzi-theme-button.muzi-level-main:hover, .muzi-button.muzi-theme-button.muzi-level-main:focus {
+  background: #0d92ff;
+  border-color: #0d92ff;
+}
+.muzi-button.muzi-theme-button.muzi-level-danger {
+  background: red;
+  border-color: red;
+  color: white;
+}
+.muzi-button.muzi-theme-button.muzi-level-danger:hover, .muzi-button.muzi-theme-button.muzi-level-danger:focus {
+  background: #cc0000;
+  border-color: #cc0000;
+}
+.muzi-button.muzi-theme-link.muzi-level-danger {
+  color: red;
+}
+.muzi-button.muzi-theme-link.muzi-level-danger:hover, .muzi-button.muzi-theme-link.muzi-level-danger:focus {
+  color: #cc0000;
+}
+.muzi-button.muzi-theme-text.muzi-level-main {
+  color: #40a9ff;
+}
+.muzi-button.muzi-theme-text.muzi-level-main:hover, .muzi-button.muzi-theme-text.muzi-level-main:focus {
+  color: #0d92ff;
+}
+.muzi-button.muzi-theme-text.muzi-level-danger {
+  color: red;
+}
+.muzi-button.muzi-theme-text.muzi-level-danger:hover, .muzi-button.muzi-theme-text.muzi-level-danger:focus {
+  color: #cc0000;
+}
+.muzi-button.muzi-theme-button[disabled] {
+  cursor: not-allowed;
+  color: grey;
+}
+.muzi-button.muzi-theme-button[disabled]:hover {
+  border-color: grey;
+}
+.muzi-button.muzi-theme-link[disabled], .muzi-button.muzi-theme-text[disabled] {
+  cursor: not-allowed;
+  color: grey;
+}
+.muzi-button .muzi-loadingIndicator {
+  width: 14px;
+  height: 14px;
+  display: inline-block;
+  margin-right: 4px;
+  border-radius: 8px;
+  border-color: #40a9ff #40a9ff #40a9ff transparent;
+  border-style: solid;
+  border-width: 2px;
+  animation: muzi-spin 1s infinite linear;
+}
+@keyframes muzi-spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.muzi-tabs-nav {
+  display: flex;
+  color: #333;
+  border-bottom: 1px solid #d9d9d9;
+  position: relative;
+}
+.muzi-tabs-nav-item {
+  padding: 8px 0;
+  margin: 0 16px;
+  cursor: pointer;
+}
+.muzi-tabs-nav-item:first-child {
+  margin-left: 0;
+}
+.muzi-tabs-nav-item.selected {
+  color: #40a9ff;
+}
+.muzi-tabs-nav-indicator {
+  position: absolute;
+  height: 3px;
+  background: #40a9ff;
+  left: 0;
+  bottom: -1px;
+  width: 100px;
+  transition: all 250ms;
+}
+.muzi-tabs-content {
+  padding: 8px 0;
+}
+.muzi-tabs-content-item {
+  display: none;
+}
+.muzi-tabs-content-item.selected {
+  display: block;
+}
+
+.muzi-switch {
+  height: 22px;
+  width: 44px;
+  border: none;
+  background: #bfbfbf;
+  border-radius: 11px;
+  position: relative;
+}
+.muzi-switch > span {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  height: 18px;
+  width: 18px;
+  background: white;
+  border-radius: 9px;
+  transition: all 250ms;
+}
+.muzi-switch.muzi-checked {
+  background: #1890ff;
+}
+.muzi-switch.muzi-checked > span {
+  left: calc(100% - 18px - 2px);
+}
+.muzi-switch:focus {
+  outline: none;
+}
+.muzi-switch:active > span {
+  width: 22px;
+}
+.muzi-switch.muzi-checked:active > span {
+  width: 22px;
+  margin-left: -4px;
+}
+
+.muzi-dialog {
+  background: white;
+  border-radius: 4px;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+  min-width: 15em;
+  max-width: 90%;
+}
+.muzi-dialog-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 10;
+}
+.muzi-dialog-wrapper {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 11;
+}
+.muzi-dialog > header {
+  padding: 12px 16px;
+  border-bottom: 1px solid #d9d9d9;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 20px;
+}
+.muzi-dialog > main {
+  padding: 12px 16px;
+}
+.muzi-dialog > footer {
+  border-top: 1px solid #d9d9d9;
+  padding: 12px 16px;
+  text-align: right;
+}
+.muzi-dialog-close {
+  position: relative;
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+.muzi-dialog-close::before, .muzi-dialog-close::after {
+  content: "";
+  position: absolute;
+  height: 1px;
+  background: black;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+}
+.muzi-dialog-close::before {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+.muzi-dialog-close::after {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
